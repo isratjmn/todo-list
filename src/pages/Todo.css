@@ -1,0 +1,10 @@
+.content-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.row-wrapper {
+	margin-bottom: 20px;
+}

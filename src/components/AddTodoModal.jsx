@@ -3,7 +3,6 @@ import { Button, Input, Modal, Select, Form } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 
 const { Option } = Select;
-
 const AddTodoModal = () => {
 	const [visible, setVisible] = useState(false);
 	const [form] = Form.useForm();
@@ -18,7 +17,6 @@ const AddTodoModal = () => {
 
 	const onFinish = (values) => {
 		console.log("Received values:", values);
-		// Your logic to handle form submission
 		setVisible(false);
 	};
 
@@ -29,7 +27,7 @@ const AddTodoModal = () => {
 			</Button>
 			<Modal
 				title="Add Task"
-				visible={visible}
+				open={visible}
 				onCancel={handleCancel}
 				footer={null}
 			>
@@ -46,13 +44,13 @@ const AddTodoModal = () => {
 					>
 						<Input />
 					</Form.Item>
-					<Form.Item
+					{/* <Form.Item
 						label="Description"
 						name="description"
 						rules={[{ required: true }]}
 					>
 						<Input.TextArea />
-					</Form.Item>
+					</Form.Item> */}
 					<Form.Item
 						label="Priority"
 						name="priority"
