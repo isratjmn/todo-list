@@ -1,50 +1,22 @@
 {
   "todos": [
     {
-      "userId": 1,
-      "id": "20",
-      "title": "ADDD",
-      "priority": "high",
-      "isCompleted": "Done"
+      "id": "45d7",
+      "title": "val cal cal",
+      "priority": "High",
+      "isCompleted": false
     },
     {
-      "userId": 2,
-      "id": "21",
-      "title": "suscipit repellat esse quibusdam voluptatem incidunt",
+      "id": "cff8",
+      "title": "Cleaning",
       "priority": "low",
-      "isCompleted": "Pending"
+      "isCompleted": true
     },
     {
-      "userId": 2,
-      "id": "26",
-      "title": "ADDDDD TODO Israt Jahan",
-      "priority": "medium",
-      "isCompleted": "Done"
-    },
-    {
-      "id": "c1c5",
-      "title": "A accusantium exceptxxxxxxxxxxxxxxxxxx",
-      "priority": "medium"
-    },
-    {
-      "id": "fc6e",
-      "title": "Vel nesciunt eaque ",
-      "priority": "medium"
-    },
-    {
-      "id": "4ea3",
-      "title": "Debitis debitis sed ",
-      "priority": "medium"
-    },
-    {
-      "id": "413f",
-      "title": "Cooking",
-      "priority": "medium"
-    },
-    {
-      "id": "caa9",
-      "title": "Cleaning & Dusting",
-      "priority": "medium"
+      "id": "ab23",
+      "title": "val cal cal",
+      "priority": "High",
+      "isCompleted": true
     }
   ]
 }

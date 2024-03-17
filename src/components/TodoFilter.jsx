@@ -38,3 +38,8 @@ const TodoFilter = ({ setPriority }) => {
 };
 
 export default TodoFilter;
+
+
+
+
+
