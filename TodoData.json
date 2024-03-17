@@ -2,7 +2,7 @@
   "todos": [
     {
       "id": "45d7",
-      "title": "val cal cal",
+      "title": "Walking 7000 KM everyday",
       "priority": "High",
       "isCompleted": false
     },
@@ -17,6 +17,21 @@
       "title": "val cal cal",
       "priority": "High",
       "isCompleted": true
+    },
+    {
+      "id": "5b0e",
+      "title": "Washing",
+      "priority": "medium"
+    },
+    {
+      "id": "74ed",
+      "title": "Studying",
+      "priority": "low"
+    },
+    {
+      "id": "0d6d",
+      "title": "Sleeping properly",
+      "priority": "medium"
     }
   ]
 }

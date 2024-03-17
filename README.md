@@ -34,7 +34,7 @@
     npm install
 ```
 
-### Start the development server:
+### Start the development envirnment for Client-side:
 
 ```bash
     npm run dev
@@ -45,6 +45,8 @@
 ```bash
     npm install -g json-server
 ```
+
+### Start the development envirnment for Server-side:
 
 ```bash
     json-server --watch --port 7000 <your-json-file.json>

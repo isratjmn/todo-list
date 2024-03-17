@@ -22,7 +22,6 @@ const TodoContainer = () => {
 		isLoading,
 		refetch: refetchTodos,
 	} = useGetTodosQuery(priority);
-
 	const [updateTodo] = useUpdateTodoMutation();
 	const [deleteTodo] = useDeleteTodoMutation();
 	const [isModalVisible, setIsModalVisible] = useState(false);
@@ -101,7 +100,7 @@ const TodoContainer = () => {
 			title: "Title",
 			dataIndex: "title",
 			key: "title",
-			width: "40%",
+			width: 400,
 		},
 		{
 			title: "Priority",
@@ -113,6 +112,7 @@ const TodoContainer = () => {
 			title: "Status",
 			dataIndex: "isCompleted",
 			key: "isCompleted",
+
 			render: (isCompleted, record) => (
 				<Tag
 					onClick={() => handleStatusToggle(record)}
@@ -219,7 +219,7 @@ const TodoContainer = () => {
 					<TodoFilter priority={priority} setPriority={setPriority} />
 				</Col>
 			</Row>
-			<Table  scroll={{ x: 300 }} size="middle" dataSource={todos} columns={columns} />
+			<Table size="middle" dataSource={todos} columns={columns} />
 		</Content>
 	);
 };
