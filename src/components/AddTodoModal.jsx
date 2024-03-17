@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Button, Input, Modal, Select, Form } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
+import { useAddTodoMutation } from "../redux/Features/TodoSlice";
 
 const { Option } = Select;
+
 const AddTodoModal = () => {
 	const [visible, setVisible] = useState(false);
 	const [form] = Form.useForm();
+	const [addTodo, { isLoading }] = useAddTodoMutation();
 
 	const showModal = () => {
 		setVisible(true);
@@ -15,9 +18,17 @@ const AddTodoModal = () => {
 		setVisible(false);
 	};
 
-	const onFinish = (values) => {
-		console.log("Received values:", values);
-		setVisible(false);
+	const onFinish = async (values) => {
+		try {
+			await addTodo({
+				title: values.task,
+				priority: values.priority,
+			});
+			form.resetFields();
+			setVisible(false);
+		} catch (error) {
+			console.error("Error adding todo:", error);
+		}
 	};
 
 	return (
@@ -40,21 +51,21 @@ const AddTodoModal = () => {
 					<Form.Item
 						label="Task"
 						name="task"
-						rules={[{ required: true }]}
+						rules={[
+							{ required: true, message: "Please enter a task" },
+						]}
 					>
 						<Input />
 					</Form.Item>
-					{/* <Form.Item
-						label="Description"
-						name="description"
-						rules={[{ required: true }]}
-					>
-						<Input.TextArea />
-					</Form.Item> */}
 					<Form.Item
 						label="Priority"
 						name="priority"
-						rules={[{ required: true }]}
+						rules={[
+							{
+								required: true,
+								message: "Please select a priority",
+							},
+						]}
 					>
 						<Select placeholder="Select priority">
 							<Option value="high">High</Option>
@@ -63,8 +74,12 @@ const AddTodoModal = () => {
 						</Select>
 					</Form.Item>
 					<Form.Item>
-						<Button type="primary" htmlType="submit">
-							Save changes
+						<Button
+							type="primary"
+							loading={isLoading}
+							htmlType="submit"
+						>
+							Add Todo
 						</Button>
 					</Form.Item>
 				</Form>

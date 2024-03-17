@@ -2,45 +2,49 @@
   "todos": [
     {
       "userId": 1,
-      "id": "18",
-      "title": "dolorum est consequatur ea mollitia in culpa",
-      "priority": "Low",
-      "isCompleted": "Pending"
-    },
-    {
-      "userId": 1,
-      "id": "19",
-      "title": "molestiae ipsa aut voluptatibus pariatur dolor nihil",
-      "priority": "High",
-      "isCompleted": "Done"
-    },
-    {
-      "userId": 1,
       "id": "20",
-      "title": "ullam nobis libero sapiente ad optio sint",
-      "priority": "Low",
+      "title": "ADDD",
+      "priority": "high",
       "isCompleted": "Done"
     },
     {
       "userId": 2,
       "id": "21",
       "title": "suscipit repellat esse quibusdam voluptatem incidunt",
-      "priority": "Low",
+      "priority": "low",
       "isCompleted": "Pending"
     },
     {
       "userId": 2,
       "id": "26",
-      "title": "ADDDDD TODO Israt",
-      "priority": "High",
+      "title": "ADDDDD TODO Israt Jahan",
+      "priority": "medium",
       "isCompleted": "Done"
     },
     {
-      "id": "11",
-      "userId": 1,
-      "title": "ADDD TODO",
-      "priority": "High",
-      "isCompleted": "Pending"
+      "id": "c1c5",
+      "title": "A accusantium exceptxxxxxxxxxxxxxxxxxx",
+      "priority": "medium"
+    },
+    {
+      "id": "fc6e",
+      "title": "Vel nesciunt eaque ",
+      "priority": "medium"
+    },
+    {
+      "id": "4ea3",
+      "title": "Debitis debitis sed ",
+      "priority": "medium"
+    },
+    {
+      "id": "413f",
+      "title": "Cooking",
+      "priority": "medium"
+    },
+    {
+      "id": "caa9",
+      "title": "Cleaning & Dusting",
+      "priority": "medium"
     }
   ]
 }

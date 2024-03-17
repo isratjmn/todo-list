@@ -5,11 +5,25 @@ export const TodoSlice = createApi({
 	baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:7000" }),
 	tagTypes: ["Todos"],
 	endpoints: (builder) => ({
-		getTodos: builder.query({
+		/* getTodos: builder.query({
 			query: () => "/todos",
 			transformResponse: (res) => res.sort((a, b) => b.id - a.id),
 			providesTags: ["Todos"],
+		}), */
+		getTodos: builder.query({
+			query: (priority) => ({
+				url: `/todos?priority=${priority}`,
+			}),
+			transformResponse: (res) => res.sort((a, b) => b.id - a.id),
+			providesTags: (result) =>
+				result
+					? [
+							...result.map(({ id }) => ({ type: "Todos", id })),
+							"Todos",
+					]
+					: ["Todos"],
 		}),
+
 		addTodo: builder.mutation({
 			query: (todo) => ({
 				url: "/todos",

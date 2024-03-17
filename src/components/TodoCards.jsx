@@ -9,7 +9,6 @@ import {
 const TodoCards = ({ title, id, isCompleted, priority }) => {
 	const [updateTodo] = useUpdateTodoMutation();
 	const [deleteTodo] = useDeleteTodoMutation();
-
 	const toggleState = () => {
 		const options = {
 			id: id,
@@ -21,11 +20,9 @@ const TodoCards = ({ title, id, isCompleted, priority }) => {
 		};
 		updateTodo(options);
 	};
-
 	const handleDelete = () => {
 		deleteTodo({ id });
 	};
-
 	return (
 		<div className="bg-white rounded-md flex justify-between items-center p-3 border-2">
 			<Checkbox checked={isCompleted} onChange={toggleState} />
